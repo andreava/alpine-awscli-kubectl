@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag andreaavanzi/alpine-awscli-kubectl:$(date +%s)
+      run: docker build . --file Dockerfile --tag andreaavanzi/alpine-awscli-kubectl:$GITHUB_REF
     - name: Push the Docker image
-      run: docker push andreaavanzi/alpine-awscli-kubectl:$(date +%s)
+      run: docker push andreaavanzi/alpine-awscli-kubectl:$GITHUB_REF
