@@ -1,2 +1,6 @@
 # alpine-awscli-kubectl
-docker image based on alpine:latest with aws-cli, kubectl, docker
+
+Immagine docker basata su alpine:latest con installati 
+- aws-cli
+- kubectl v1.17.0
+- docker 17.06.2-ce
