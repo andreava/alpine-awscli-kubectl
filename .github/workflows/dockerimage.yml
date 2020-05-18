@@ -20,7 +20,7 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          return context.payload.ref.replace(/\/refs\/tags\//, '');
+          return git describe --abbrev=0;
     - name: Echo
       run: echo ${{ steps.tag.outputs.result }}
     - name: Build the Docker image
